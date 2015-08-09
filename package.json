@@ -1,0 +1,16 @@
+{
+  "name": "@lib/autolink",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/charto/autolink",
+  "bugs": {
+    "url": "https://github.com/charto/autolink/issues"
+  },
+  "main": "autolink.js",
+  "author": "Juha Järvi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charto/autolink.git"
+  }
+}
