@@ -3,6 +3,7 @@
 
 var fs = require('fs');
 var path = require('path');
+var Module = require('module');
 
 /** Read configuration file in JSON format.
   *
@@ -77,6 +78,17 @@ exports.findModuleConf = function(modulePath, nameList) {
 	}
 
 	return(null);
+}
+
+exports.resolve = function(dst, src) {
+	try {
+		var srcPath = src || '.';
+		var paths = Module._nodeModulePaths(path.dirname(src));
+
+		return(Module._resolveFilename(dst, {paths: paths}));
+	} catch(e) {
+		return(null);
+	}
 }
 
 function notPathy(name) {
